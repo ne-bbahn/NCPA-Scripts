@@ -2,7 +2,11 @@
 
 # SSH into the target machine(s) and update the configuration files to enable passive
 
-IP_LIST=("192.168.0.230" "192.168.1.9" "192.168.1.1" "192.168.1.12" "192.168.1.14" "192.168.1.11" "192.168.0.115" "192.168.0.2")
+IP_LIST=( "192.168.0.230" "192.168.1.9")                # RHEL
+IP_LIST+=("192.168.1.1")                                # CentOS
+IP_LIST+=("192.168.1.12" "192.168.1.14")                # Oracle Linux
+IP_LIST+=("192.168.1.11" "192.168.0.115" "192.168.0.2") # Ubuntu
+IP_LIST+=("192.168.0.251" "192.168.0.236")              # Debian
 SSH_USER="root"
 SSH_PASS="welcome"
 
@@ -15,6 +19,12 @@ declare -A FILE_MODIFICATIONS=(
 for IP in "${IP_LIST[@]}"
 do
     echo "Connecting to $IP"
+    sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 "${SSH_USER}@${IP}" "exit"
+    if [ $? -ne 0 ]; then
+        echo "Failed to connect to $IP. Skipping..."
+        continue
+    fi
+    
     for FILE in "${!FILE_MODIFICATIONS[@]}"
     do
         FILE_PATH="${FILE%_*}"
