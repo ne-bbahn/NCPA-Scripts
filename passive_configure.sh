@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # SSH into the target machine(s) and update the configuration files to enable passive
+# NOTE: not very secure, only for testing/QA purposes
 
-IP_LIST=( "192.168.0.230" "192.168.1.9")                # RHEL
-IP_LIST+=("192.168.1.1")                                # CentOS
-IP_LIST+=("192.168.1.12" "192.168.1.14")                # Oracle Linux
-IP_LIST+=("192.168.1.11" "192.168.0.115" "192.168.0.2") # Ubuntu
-IP_LIST+=("192.168.0.251" "192.168.0.236")              # Debian
+IP_LIST=( "192.168.141.136")                                    # CentOS
+IP_LIST+=("192.168.141.137")                                    # RHEL
+# IP_LIST+=("192.168.1.12" "192.168.1.14")                      # Oracle Linux
+IP_LIST+=("192.168.43.138" "192.168.43.137" "192.168.43.130")   # Ubuntu
+# IP_LIST+=("192.168.0.251" "192.168.0.236")                    # Debian
 SSH_USER="root"
 SSH_PASS="welcome"
 
