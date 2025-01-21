@@ -1,0 +1,45 @@
+Level,Date and Time,Source,Event ID,Task Category
+Information,1/21/2025 1:41:30 PM,Windows Error Reporting,1001,None,"Fault bucket 2059626580900125767, type 4
+Event Name: APPCRASH
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: ncpa.exe
+P2: 3.1.2.0
+P3: 6778e63b
+P4: python311.DLL
+P5: 3.11.8150.1013
+P6: 65c2ad06
+P7: c0000005
+P8: 000000000009f907
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.b62af496-65ab-4aae-bf4f-19b8f915e09d.tmp.dmp
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.ee7350b5-1e0d-4ec9-837b-8c319716a510.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.eb0c4526-50b8-4de9-8215-a29d773e9792.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.9498c912-fb0b-4b04-b2bf-b7d14a808036.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.a7f6a694-db62-4183-84f5-687a74e84138.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportArchive\AppCrash_ncpa.exe_242016fd63bdaee43da53e4b49536d0a5b761b7_42db2bfa_cb5911d0-3443-4c2b-b2eb-5b9d51b436a1
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: 7ecf86e8-6ec3-408e-8fd3-00529383bdee
+Report Status: 268435456
+Hashed bucket: 3b2aa4686e59cf2c5c95437684811c47
+Cab Guid: 0"
+Error,1/21/2025 1:41:29 PM,Application Error,1000,Application Crashing Events,"Faulting application name: ncpa.exe, version: 3.1.2.0, time stamp: 0x6778e63b
+Faulting module name: python311.DLL, version: 3.11.8150.1013, time stamp: 0x65c2ad06
+Exception code: 0xc0000005
+Fault offset: 0x000000000009f907
+Faulting process id: 0x0x2278
+Faulting application start time: 0x0x1DB6C4D3A81D2C6
+Faulting application path: C:\Program Files\Nagios\NCPA\ncpa.exe
+Faulting module path: C:\Program Files\Nagios\NCPA\python311.DLL
+Report Id: 7ecf86e8-6ec3-408e-8fd3-00529383bdee
+Faulting package full name: 
+Faulting package-relative application ID: "
